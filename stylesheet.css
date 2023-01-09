@@ -1,0 +1,147 @@
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Inter', sans-serif; */
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+body h1 {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.frame {
+  height: 300px;
+  width: 300px;
+  perspective: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cube {
+  height: 100px;
+  width: 100px;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateX(-20deg) rotateY(-60deg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: rotation 8s linear infinite;
+}
+
+.big {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+
+.side {
+  background: url("side.png") center center / cover no-repeat;
+}
+
+.end {
+  background: url("top.png") center center / cover no-repeat;
+}
+
+.front {
+  transform: translateZ(50px);
+  background-color: blue;
+}
+.back {
+  transform: translateZ(-50px);
+  background-color: green;
+}
+.left {
+  transform: rotateY(270deg) translateZ(50px);
+  background-color: yellow;
+}
+.right {
+  transform: rotateY(90deg) translateZ(50px);
+  background-color: black;
+}
+.top {
+  transform: rotatex(90deg) translateZ(50px);
+  background-color: orange;
+}
+.bottom {
+  transform: rotatex(90deg) translateZ(-50px);
+  background-color: purple;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotatex(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotatex(360deg) rotateY(360deg);
+  }
+}
+
+.small {
+  height: 20px;
+  width: 15px;
+  position: absolute;
+}
+.lock {
+  background: url("lock.png");
+}
+
+.frontlock {
+  transform: translateZ(60px) translateY(-15px);
+  background-color: yellow;
+}
+.toplock {
+  position: absolute;
+  height: 20px;
+  width: 15px;
+  transform: rotateX(90deg) translateZ(25px) translateY(50px);
+  background-color: green;
+}
+.bottomlock {
+  position: absolute;
+  height: 20px;
+  width: 15px;
+  transform: rotateX(90deg) translateZ(5px) translateY(50px);
+  background-color: teal;
+}
+.leftlock {
+  position: absolute;
+  height: 20px;
+  width: 15px;
+  transform: rotateY(90deg) translateZ(-7px) translateX(-53px) translateY(-15px);
+  background-color: purple;
+}
+.rightlock {
+  position: absolute;
+  height: 20px;
+  width: 15px;
+  transform: rotateY(90deg) translateZ(7px) translateX(-53px) translateY(-15px);
+  background-color: yellow;
+}
+
+.textsInfo {
+  padding: 1rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+.textsInfo p {
+  text-align: center;
+}
+
+.textsInfo h1 {
+  color: #f0db4f;
+}
